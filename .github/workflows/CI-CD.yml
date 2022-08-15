@@ -18,7 +18,6 @@ env:
 
 jobs:
   code-analysis-and-testing:
-    if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     name: Code analysis and testing
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -43,7 +42,6 @@ jobs:
 
 
   android:
-    if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     name: Android CI/CD
     needs: code-analysis-and-testing
     runs-on: ubuntu-latest
