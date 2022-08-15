@@ -9,8 +9,8 @@ class LauncherPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: const Text("Initial Page"),
+        backgroundColor: Colors.green,
+        title: const Text("Defualt app project"),
       ),
       body: const Center(
         child: Text(
