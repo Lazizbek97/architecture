@@ -16,16 +16,15 @@ class Translations {
   }
 
   static Future<Translations> load(Locale locale) async {
-    Translations _translations = Translations._();
+    Translations translations = Translations._();
     String jsonContent = await rootBundle.loadString(
       "assets/locale/${locale.languageCode}.json",
     );
     try {
       _localizedValues = jsonDecode(jsonContent);
-    } catch (e) {
-      print(e);
-    }
-    return _translations;
+    // ignore: empty_catches
+    } catch (e) {}
+    return translations;
   }
 
   static const LocalizationsDelegate<Translations> delegate =

@@ -103,31 +103,13 @@ abstract class NetworkExceptions with _$NetworkExceptions {
             case DioErrorType.sendTimeout:
               networkExceptions = const NetworkExceptions.sendTimeout();
               break;
-            case DioErrorType.connectTimeout:
-              // TODO: Handle this case.
-              break;
-            case DioErrorType.sendTimeout:
-              // TODO: Handle this case.
-              break;
-            case DioErrorType.receiveTimeout:
-              // TODO: Handle this case.
-              break;
-            case DioErrorType.response:
-              // TODO: Handle this case.
-              break;
-            case DioErrorType.cancel:
-              // TODO: Handle this case.
-              break;
-            case DioErrorType.other:
-              // TODO: Handle this case.
-              break;
           }
         } else if (error is SocketException) {
           networkExceptions = const NetworkExceptions.noInternetConnection();
         } else {
           networkExceptions = const NetworkExceptions.unexpectedError();
         }
-        return networkExceptions!;
+        return networkExceptions;
       } on FormatException catch (_) {
         return const NetworkExceptions.formatException();
       } catch (_) {
