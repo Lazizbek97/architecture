@@ -1,13 +1,9 @@
 import 'package:architecture/src/presentation/pages/auth/cubit/auth_cubit.dart';
 import 'package:architecture/src/presentation/theme/cubit/settings_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:keyboard_dismisser/keyboard_dismisser.dart';
-import 'package:flutter_localizations/src/material_localizations.dart';
-
 import 'core/constants/constants.dart';
 import 'core/di/injection_extention.dart';
 import 'core/locale/translations.dart';

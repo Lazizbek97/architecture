@@ -10,7 +10,7 @@ abstract class AppPages {
 
   static Map<String, WidgetBuilder> routes = {
     Routes.initial: (_) => const LauncherPage(),
-    Routes.auth: (_) => AuthPage(),
+    Routes.auth: (_) => const AuthPage(),
     Routes.main: (_) => const MainPage(),
   };
 }

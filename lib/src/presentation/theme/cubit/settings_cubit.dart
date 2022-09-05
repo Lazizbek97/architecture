@@ -15,7 +15,7 @@ part 'settings_cubit.g.dart';
 class SettingsCubit extends Cubit<SettingsState> {
   final LocalSource _local = LocalSource.instance;
   SettingsCubit()
-      : super(SettingsState(
+      : super(const SettingsState(
           theme: ThemeMode.system,
           lang: 'ru',
         ));
